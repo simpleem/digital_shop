@@ -35,7 +35,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			<s:iterator value="#request.list" var="product">
   			<tr>
   				<td><img src="../<s:property value="#product.proImg" />"></img></td>
-  				<td><s:property value="#product.proName" /></td>
+  				<td>
+  					<a href="product.action?product.proName=<s:property value="#product.proName" />" >
+  						<s:property value="#product.proName" />
+  					</a>
+  				</td>
   				<td><s:property value="#product.proPrice" /></td>
   				<td><s:property value="#product.proNum" /></td>
   			</tr>

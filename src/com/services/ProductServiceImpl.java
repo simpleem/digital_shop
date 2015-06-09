@@ -22,4 +22,13 @@ public class ProductServiceImpl implements ProductService{
 		return productDao.searchProductBySearchBox(searchBox);
 	}
 
+	@Transactional(propagation = Propagation.NOT_SUPPORTED)
+	public List<Product> searchProductByName(String name) {
+		return productDao.searchProductByName(name);
+	}
+
+	public boolean addShoppingCart(String img, String name, double price, int quantity) {
+		return productDao.addShoppingCart(img, name, price,quantity);
+	}
+
 }

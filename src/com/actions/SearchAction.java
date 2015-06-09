@@ -11,7 +11,7 @@ import com.domain.Product;
 import com.opensymphony.xwork2.ActionSupport;
 import com.services.ProductService;
 
-public class searchAction extends ActionSupport{
+public class SearchAction extends ActionSupport{
 	private String search;
 	@Resource
 	private ProductService productService;
